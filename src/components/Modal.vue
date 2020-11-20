@@ -15,6 +15,7 @@
             <i class="bx far fa-edit bx-error text-1xl"></i>
           </div>
           <div class="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
+            <Alert />
             <p class="font-bold">Farm record form</p>
             <p class="text-sm text-gray-700 mt-1"></p>
             <form>
@@ -97,9 +98,13 @@
 <script scoped>
 import { computed, reactive, toRefs } from "vue";
 import { useStore } from "vuex";
+import Alert from "@/components/Alert";
 
 export default {
   name: "Modal",
+  components: {
+    Alert,
+  },
   setup(props) {
     let store = useStore();
     let state = reactive({
