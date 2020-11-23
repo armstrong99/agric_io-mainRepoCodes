@@ -66,6 +66,9 @@ export default createStore({
        state[authData.email] = authData
     },
 
+    addFarmRecs(state, farmData) {
+      state.FarmRecs[farmData.owner] = [farmData.data, ...state.FarmRecs[farmData.owner]]
+    },
     toggleModal(state, bol) {
       state.visible = bol
     }
@@ -78,6 +81,7 @@ export default createStore({
         case 'get-name':return Object.values(state.farmers)[0].name.split(' ')[0]
         case 'get-record': return Object.values(state.FarmRecs)[0]
         case 'get-bio': return Object.values(state.farmers)[0]
+        case 'get-email': return Object.values(state.farmers)[0].email
          default:
           break;
       }
