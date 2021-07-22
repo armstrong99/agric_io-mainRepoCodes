@@ -1,8 +1,12 @@
 # agrik_io
 
+````
+Built on VUE 3 -  Agricultural Management System
+````
+
 ## Project setup
 ```
-yarn install
+yarn 
 ```
 
 ### Compiles and hot-reloads for development
